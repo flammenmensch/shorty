@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIWebViewDelegate, NSURLConnectionDelegate, NSURLConnectionDataDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *urlField;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *shortenButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *shortLabel;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *clipboardButton;
+
+- (IBAction)shortenURL:(id)sender;
+- (IBAction)clipboardURL:(id)sender;
 
 @end
